@@ -30,6 +30,9 @@ void _variable(std::string Line) {
         if (value.find("&") != std::string::npos) {
             value = extractValue(value);
         }
+        if (isNumericAndOperatorOnly(value) && hasOperator(value)) {
+            value = evaluate(value);
+        }
         if (type.compare("bool") == 0) {
             static bool b = stringToBool(value);
             set(name,type,&b);

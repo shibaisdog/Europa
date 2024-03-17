@@ -1,5 +1,6 @@
 #pragma once
 #include "../../header/extract.h"
+#include "../../header/operations.h"
 #include <iostream>
 #include <string>
 #include <regex>
